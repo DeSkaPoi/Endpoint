@@ -17,7 +17,13 @@ namespace Infratructure.Services
             _commandRepository = commandRepository;
         }
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+
+        public async Task Execute()
+        {
+            await ExecuteAsync();
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken = default)
         {
             while (!stoppingToken.IsCancellationRequested) 
             {

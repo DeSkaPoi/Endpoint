@@ -24,7 +24,7 @@ namespace Infratructure.Repositories
 
         public bool IsEmpty()
         {
-            return _commands.Count > 0 ? true : false;
+            return _commands.Count > 0 ? false : true;
         }
 
         public ICommand PeekAndDeque() 
